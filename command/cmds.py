@@ -105,6 +105,7 @@ def create_argument_parser(description = None):
 	
 	parser.add_argument("-t", "--test", action = "store_true", default=False,
 		   help = "Launches unit tests", dest = "tests")
+	return parser
 
 import subprocess
 def try_exec(directory, script_name, args):

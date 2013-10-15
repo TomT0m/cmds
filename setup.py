@@ -8,9 +8,9 @@ from distutils.core import setup
 setup(
     name = 'cmds',
     version = '1.0',
-    packages = ['cmds'],
-    scripts = commands,
+    packages = ['command'],
+    scripts = ["commands"],
     license = 'MIT',
     description = 'command line commands, with autcompletion with bash',
-    long_description=open('README').read()
+    long_description=open('README.md').read()
 )
