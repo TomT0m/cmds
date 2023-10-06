@@ -8,7 +8,7 @@ from distutils.core import setup
 setup(
     name = 'cmds',
     version = '1.0',
-    packages = ['command'],
+    packages = ['cmds'],
     scripts = ["commands"],
     license = 'MIT',
     description = 'command line commands, with autcompletion with bash',

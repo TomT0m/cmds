@@ -26,8 +26,8 @@ def matches_spec(scriptname):
 			for line in f:
 				if '#Description' in line:
 					return True
-				# if '#Group' in line:
-				#	return True
+				if '#Meta' in line:
+					return True
 	except Exception:
 		return False
 import re
@@ -96,15 +96,15 @@ def create_cl_parser():
 	return parser
 
 import argparse
-def create_argument_parser(description = None):
+def create_argument_parser(description=None):
 	""" New version with argparse """
 	parser = argparse.ArgumentParser(description = description)
 
 	parser.add_argument("-c", "--complete", action = "store_true", default=False,
-		   help = "to be used by bash autocomplete", dest = "complete")
+		   help="to be used by bash autocomplete", dest = "complete")
 	
 	parser.add_argument("-t", "--test", action = "store_true", default=False,
-		   help = "Launches unit tests", dest = "tests")
+		   help="Launches unit tests", dest = "tests")
 	return parser
 
 import subprocess
